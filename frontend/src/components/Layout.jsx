@@ -69,9 +69,33 @@ export default function Layout({ children }) {
               <div className="text-[10px] text-gray-500 capitalize">{ws.role_name}</div>
             </Link>
           ))}
-          <button className="w-full flex items-center justify-center gap-2 p-3 border border-dashed border-gray-700 rounded-xl text-[10px] font-bold hover:bg-[#1A1A1A] mt-3">
+          <button
+            onClick={() => router.push('/create-workspace')}
+            className="w-full flex items-center justify-center gap-2 p-3 border border-dashed border-gray-700 rounded-xl text-[10px] font-bold hover:bg-[#1A1A1A] mt-3"
+          >
             <Plus size={14}/> NEW WORKSPACE
           </button>
+
+          {workspaceId && (
+            <button
+              onClick={async () => {
+                try {
+                  const ws = workspaces.find(w => w.custom_url === workspaceId);
+                  if (!ws) return;
+                  const res = await api.post(`/workspace/${ws.workspace_id}/invite`);
+                  if (res.data.success) {
+                    navigator.clipboard.writeText(res.data.payload.invite_url);
+                    alert('Invite link berhasil disalin!');
+                  }
+                } catch (err) {
+                  alert('Gagal generate invite link.');
+                }
+              }}
+              className="w-full flex items-center justify-center gap-2 p-3 border border-dashed border-gray-600 rounded-xl text-[10px] font-bold hover:bg-[#1A1A1A] mt-2 text-gray-500"
+            >
+              🔗 COPY INVITE LINK
+            </button>
+          )}
         </div>
 
         <nav className="flex-1">

@@ -89,6 +89,40 @@ class WorkspaceController {
       next(error);
     }
   }
+
+  static async generateInvite(req, res, next) {
+    try {
+      const { workspace_id } = req.params;
+      const token = await WorkspaceService.generateInviteLink(workspace_id);
+      res.status(200).json({
+        success: true,
+        message: 'Invite link generated',
+        payload: {
+          invite_token: token,
+          invite_url: `${process.env.FRONTEND_URL}/join/${token}`,
+          expires_in: '24 hours',
+        },
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async joinByInvite(req, res, next) {
+    try {
+      const { invite_token } = req.params;
+      const { user_id } = req.user;
+      const workspace = await WorkspaceService.joinByInvite(invite_token, user_id);
+      res.status(200).json({
+        success: true,
+        message: 'Successfully joined workspace',
+        payload: workspace,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+  
 }
 
 module.exports = WorkspaceController;

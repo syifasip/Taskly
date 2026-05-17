@@ -9,7 +9,7 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
+  
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
@@ -19,7 +19,7 @@ export default function Register() {
         if (loginRes.data.success) {
           localStorage.setItem('token', loginRes.data.payload.token);
           localStorage.setItem('user', JSON.stringify(loginRes.data.payload.user));
-          router.push('/login');
+          router.push('/create-workspace');
         }
       }
     } catch (err) {

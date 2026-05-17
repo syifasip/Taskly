@@ -16,11 +16,20 @@ export default function Login() {
       if (res.data.success) {
         localStorage.setItem('token', res.data.payload.token);
         localStorage.setItem('user', JSON.stringify(res.data.payload.user));
+
+        // cek pending invite dulu
+        const pendingInvite = localStorage.getItem('pendingInvite');
+        if (pendingInvite) {
+          localStorage.removeItem('pendingInvite');
+          router.push(`/join/${pendingInvite}`);
+          return;
+        }
+
         const wsRes = await api.get('/user/workspaces');
         if (wsRes.data.success && wsRes.data.payload.length > 0) {
           router.push(`/w/${wsRes.data.payload[0].custom_url}/tasks`);
         } else {
-          router.push('/login');
+          router.push('/create-workspace');
         }
       }
     } catch (err) {
