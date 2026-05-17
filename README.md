@@ -29,6 +29,16 @@ Taskly juga menyediakan kalender terintegrasi yang secara otomatis menampilkan s
 
 ---
 
+## Diagram
+
+UML
+
+ERD
+
+Flowchart
+
+---
+
 ## Database Architecture
 
 | Database | Fungsi |
@@ -176,19 +186,6 @@ node server.js
 cd frontend
 npm install
 npm run dev
-```
-
----
-
-## RBAC — Role & Permission
-
-Permission ditetapkan per role, dan role ditetapkan per anggota workspace. Satu pengguna dapat memiliki izin yang berbeda di workspace yang berbeda.
-
-```
-Workspace
-  └── Role (contoh: Admin, Editor, Viewer)
-        └── Permission (add_task, delete_role, manage_team_roles, ...)
-              └── Anggota yang memiliki role tersebut
 ```
 
 ---
