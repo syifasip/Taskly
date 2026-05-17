@@ -9,3 +9,12 @@ Taskly juga menyediakan URL unik untuk setiap workspace sehingga berbagai tim da
 </p>
 
 ---
+
+# Group Members
+
+- Vanesa Kayla Zahra - 2306161901
+- Soraya Azzizah Pahlevi - 2406487001
+- Syifa Aulia Azhim - 2406413445
+- Putu Arkana Satriakusuma - 2406486983
+
+---
