@@ -1,7 +1,7 @@
 const { body, param, query } = require('express-validator');
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])[A-Za-z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{10,}$/;
+const passwordRegex = /^.{8,}$/;
 const fullNameRegex = /^[a-zA-Z\s]{2,100}$/;
 const customUrlRegex = /^[a-z0-9-]{3,50}$/;
 const colorRegex = /^(blue|yellow|green|pink|red|purple|orange)$/;
