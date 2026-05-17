@@ -145,48 +145,62 @@ Seluruh halaman setelah login memiliki dua elemen yang selalu tampil:
 
 ## Installation Guide
 
-### Prerequisites
-
-- Node.js >= 18
-- PostgreSQL (atau akun [Neon](https://neon.tech))
-- Redis
-
-### Clone Repository
+Clone this repository
 
 ```bash
-git clone https://github.com/username/taskly.git
-cd taskly
-```
-
-### Backend
-
-```bash
-cd backend
-npm install
-```
-
-Buat file `.env` di root folder backend:
-
-```env
-DATABASE_URL=postgresql://user:password@neon.tech/taskly
-REDIS_URL=redis://localhost:6379
-JWT_SECRET=your_jwt_secret
-PORT=5000
-```
-
-Jalankan server:
-
-```bash
-node server.js
+git clone https://github.com/syifasip/Taskly.git
 ```
 
 ### Frontend
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- Ensure you're on the right folder
+
+  ```
+  cd frontend
+  ```
+
+- Run npm install to install all dependencies
+
+  ```bash
+  npm install
+  ```
+
+- To run the frontend
+
+  ```bash
+  npm run dev
+  ```
+
+### Backend
+
+- Ensure you're on the right folder
+
+  ```
+  cd backend
+  ```
+
+- Run npm install to install all dependencies
+
+  ```bash
+  npm install
+  ```
+
+- Create an `.env` file in your project root folder and add your variables
+
+- Insert database variables
+
+  ```env
+  DATABASE_URL=postgresql://user:password@neon.tech/taskly
+  REDIS_URL=redis://localhost:6379
+  JWT_SECRET=your_jwt_secret
+  PORT=5000
+  ```
+
+- To run the backend server
+
+  ```bash
+  node server.js
+  ```
 
 ---
 
@@ -198,5 +212,3 @@ npm run dev
 | Soraya Azzizah Pahlevi | 2406487001 |
 | Syifa Aulia Azhim | 2406413445 |
 | Putu Arkana Satriakusuma | 2406486983 |
-
----
