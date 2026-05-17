@@ -32,10 +32,17 @@ Taskly juga menyediakan kalender terintegrasi yang secara otomatis menampilkan s
 ## Diagram
 
 UML
+<img width="1198" height="1372" alt="WhatsApp Image 2026-05-17 at 21 13 09" src="https://github.com/user-attachments/assets/36238bd3-f0f9-4581-8be6-fe24bae3e2cb" />
+
 
 ERD
+<img width="1586" height="1348" alt="WhatsApp Image 2026-05-17 at 21 13 10" src="https://github.com/user-attachments/assets/09f37cc3-7a73-420a-95c2-769d401045a2" />
+
+
 
 Flowchart
+<img width="1600" height="1341" alt="WhatsApp Image 2026-05-17 at 21 13 07" src="https://github.com/user-attachments/assets/01cfaa19-1350-4cab-9119-80ec763a6f3e" />
+
 
 ---
 
