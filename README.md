@@ -1,7 +1,7 @@
-<h1 align="center"> Taskly - Workspace-Based Task Management System</h1>
+<h1 align="center"> Taskly </h1>
 
 <p align="center">
-Revolutionizing Team Collaboration Through Smart Task Organization
+Workspace-Based Task Management System
 </p>
 
 ---
